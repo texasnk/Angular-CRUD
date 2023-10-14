@@ -16,4 +16,12 @@ export class CriarPensamentoComponent {
   constructor() {}
 
   ngOnInit(): void {}
+
+  Salvar(){
+    alert('Teste salvar')
+  }
+
+  Cancelar(){
+    alert('Teste cancelar')
+  }
 }
