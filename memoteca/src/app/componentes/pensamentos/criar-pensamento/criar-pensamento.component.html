@@ -103,7 +103,13 @@
       </div>
       <div class="acoes">
         <button (click)="Salvar()" class="botao">Salvar</button>
-        <button (click)="Cancelar()" class="botao">Cancelar</button>
+        <button
+          routerLink="/listarPensamento"
+          (click)="Cancelar()"
+          class="botao"
+        >
+          Cancelar
+        </button>
       </div>
     </form>
   </header>

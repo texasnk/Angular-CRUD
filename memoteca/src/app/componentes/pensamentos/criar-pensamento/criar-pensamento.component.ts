@@ -22,6 +22,6 @@ export class CriarPensamentoComponent {
   }
 
   Cancelar(){
-    alert('Teste cancelar')
+    
   }
 }
