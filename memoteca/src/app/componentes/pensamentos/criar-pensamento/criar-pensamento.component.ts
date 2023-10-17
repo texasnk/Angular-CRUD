@@ -1,3 +1,4 @@
+import { Pensamento } from './../pensamento';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './criar-pensamento.component.html',
   styleUrls: ['./criar-pensamento.component.css'],
 })
-export class CriarPensamentoComponent {
-  pensamento = {
-    id: '1',
+export class CriarPensamentoComponent{
+  pensamento: Pensamento = {
+    id: 1,
     conteudo: 'Aprendendo angular',
     autoria: 'Dev',
     modelo: '',
