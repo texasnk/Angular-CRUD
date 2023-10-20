@@ -122,7 +122,13 @@
       </div>
     </div>
     <div class="acoes">
-      <button (click)="Salvar()" class="botao">Salvar</button>
+      <button
+        [disabled]="!formulario.valid"
+        [ngClass]="habilitarBotao()"
+        (click)="Salvar()"
+      >
+        Salvar
+      </button>
       <button routerLink="/listarPensamento" (click)="Cancelar()" class="botao">
         Cancelar
       </button>
