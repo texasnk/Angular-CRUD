@@ -11,6 +11,7 @@ export class ListarPensamentoComponent {
   listaPensamentos: Pensamento[] = [];
   haMaisPensamentos: boolean = true;
   paginaAtual: number = 1;
+  filtro: string = '';
 
   constructor(private service: PensamentoService) {}
 
@@ -25,7 +26,7 @@ export class ListarPensamentoComponent {
       if (respostaObservable.length === 0) {
         this.haMaisPensamentos = false;
       } else {
-        this.listaPensamentos = respostaObservable;
+        this.listaPensamentos.push(...respostaObservable);
       }
     });
   }
