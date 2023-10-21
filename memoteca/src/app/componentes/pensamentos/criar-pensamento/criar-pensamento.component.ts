@@ -36,7 +36,6 @@ export class CriarPensamentoComponent {
   }
 
   Salvar() {
-    console.log('Forms', this.formulario.get('autoria')?.errors);
     if (this.formulario.valid) {
       this.service.criar(this.formulario.value).subscribe(() => {
         this.router.navigate(['/listarPensamento']);
