@@ -15,6 +15,7 @@ export class EditarPensamentoComponent {
     conteudo: '',
     autoria: '',
     modelo: '',
+    favorito: false,
   };
 
   formulario!: FormGroup;
@@ -31,6 +32,7 @@ export class EditarPensamentoComponent {
       conteudo: '',
       autoria: '',
       modelo: [''],
+      favorito: false,
     });
 
     const id = this.route.snapshot.paramMap.get('id');
@@ -54,6 +56,7 @@ export class EditarPensamentoComponent {
             Validators.compose([Validators.required, Validators.minLength(3)]),
           ],
           modelo: [this.pensamento.modelo] || [''],
+          favorito: [false],
         });
       });
   }
